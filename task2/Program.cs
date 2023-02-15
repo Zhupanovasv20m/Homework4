@@ -5,12 +5,21 @@
 
 Console.WriteLine("Введите число");
 int num = Convert.ToInt32(Console.ReadLine());
-int result = 0;
 
-while (num > 0)
+int Sum(int num)
 {
-    int count = num % 10;
-    result = result + count;
-    num = num / 10;
+    int count = Convert.ToString(num).Length;
+    int step = 0;
+    int result = 0;
+    for (int i = 0; i < count; i++)
+    {
+        step = num % 10;
+        result = result + step;
+        num = num / 10;
+    }
+    return result;
 }
-System.Console.WriteLine(result);
+
+int sum = Sum(num);
+Console.WriteLine($"{num} => {sum}");
+
