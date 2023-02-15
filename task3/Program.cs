@@ -5,20 +5,36 @@
 
 
 
-int [] Array = GetRandomArray (8);
+// void array(string[] args)
+// {
+//     int[] Array = new int[8];
+// }
 
-for (int i = 0; i < Array.Length; i++)
+// Random num = new Random();
+// for (int i = 0; i < Array.Length; i++)
+// {
+//     Array[i] = num.Next(1000);
+//     System.Console.WriteLine(Array);
+// }
+
+
+PrintArr(GetRan (8));
+System.Console.Write($"]");
+int [] GetRan (int length)
 {
-    Array [i] = new Random().Next(0, 10000);
-    System.Console.WriteLine(" " + PrintArray (i) + " ");
+    System.Console.Write($"[");
+    int [] result = new int [length];
+    for (int i = 0; i< length ; i++)
+    {
+        result [i] = new Random ().Next (0, 1000);
+    }
+    return result;
 }
 
-
-void PrintArray (int [] Array)
+void PrintArr(int [] arr)
 {
-    foreach (int item in Array)
+    foreach (int item in arr)
     {
-        System.Console.WriteLine(item);
+        System.Console.Write($"{item},");
     }
 }
-System.Console.WriteLine(item + " " );
